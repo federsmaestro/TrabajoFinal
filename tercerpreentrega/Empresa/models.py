@@ -24,7 +24,7 @@ class Pais(models.Model):
 
 
 class Empresa(models.Model):
-    nombre = models.PositiveIntegerField(unique=True)
+    nombre = models.CharField(unique=True,max_length=50)
     sector = models.ForeignKey(Sector, on_delete=models.SET_NULL, null=True, blank=True)
     pais = models.ForeignKey(Pais, on_delete=models.SET_NULL, null=True, blank=True)
     industria = models.ForeignKey(Industria, on_delete=models.SET_NULL, null=True, blank=True)
