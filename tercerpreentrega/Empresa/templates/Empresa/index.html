@@ -5,8 +5,11 @@
 {% endblock titulo %}
 
 {% block contenido %} 
-    {% for empresa in empresas %}
-        <h2>{{ empresa.nombre }} | {{ empresa.pais }} | {{ empresa.sector }}| {{ empresa.industria }}</h2>
-   {% endfor %}    
+       <div>
+        <a href="{% url 'Empresa:empresa_list' %}">Listar empresas</a>
+       </div>
+       <div>
+        <a href="{% url 'Empresa:empresa_create' %}">Ingresar empresas</a>
+       </div>
  
 {% endblock contenido %}

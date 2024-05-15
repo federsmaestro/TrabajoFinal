@@ -1,0 +1,16 @@
+{% extends 'core/base.html' %}
+
+{% block titulo %}
+    <h1>Empresas</h1>
+{% endblock titulo %}
+
+{% block contenido %} 
+    <form method="post">
+        {% csrf_token %}
+        <table>
+            {{form.as_table}}
+        </table>
+        <button type="submit">Guardar</button>
+    </form>
+
+{% endblock contenido %}

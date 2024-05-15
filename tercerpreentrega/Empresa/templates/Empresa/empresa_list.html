@@ -1,0 +1,16 @@
+{% extends 'core/base.html' %}
+
+{% block titulo %}
+    <h1>Empresas</h1>
+{% endblock titulo %}
+
+{% block contenido %} 
+    {% for object in object_list %}
+        <h2>{{ object.nombre }} | 
+            {{ object.sector }} | 
+            {{ object.industria }}| 
+            {{ object.pais }}
+        </h2>
+   {% endfor %}    
+ 
+{% endblock contenido %}
