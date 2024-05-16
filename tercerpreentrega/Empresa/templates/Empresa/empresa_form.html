@@ -10,7 +10,10 @@
         <table>
             {{form.as_table}}
         </table>
-        <button type="submit">Guardar</button>
+        <button type="submit" >Guardar</button>
+        <div>
+            <a href="{% url 'Empresa:index' %}">Volver</a>
+        </div>
     </form>
 
 {% endblock contenido %}
