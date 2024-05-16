@@ -5,6 +5,19 @@
 {% endblock titulo %}
 
 {% block contenido %} 
+    <div class="col-lg-6">
+        <form action="{% url 'Empresa:empresa_list' %}"
+            method="get"
+            class="input-group">
+            <input type="text"
+                name="busqueda"
+                class="form-control"
+                placeholder="Buscar...">
+            <div class="input-group-append">
+                <button class="btn btn-primary" type="submit">Buscar empresas</button>
+            </div>
+        </form>
+    </div>
     {% for object in object_list %}
         <h2>{{ object.nombre }} | 
             {{ object.sector }} | 

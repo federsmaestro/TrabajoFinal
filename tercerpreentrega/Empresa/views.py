@@ -1,7 +1,11 @@
+from django.db.models.query import QuerySet
 from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views.generic import CreateView, ListView
 from . import models, forms
+from Empresa.models import Empresa
+from typing import Any
+
 
 def index(request):
    
@@ -9,6 +13,15 @@ def index(request):
 
 class EmpresaList(ListView):
     model = models.Empresa
+
+    def get_queryset(self) -> QuerySet[Any]:
+        if self.request.GET.get("busqueda"):
+            busqueda =  self.request.GET.get("busqueda")
+            consulta = Empresa.objects.filter(nombre__icontains=busqueda)
+        else:
+            consulta = Empresa.objects.all()
+
+        return consulta
 
 class EmpresaCreate(CreateView):
     model = models.Empresa
