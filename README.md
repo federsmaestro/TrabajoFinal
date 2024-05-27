@@ -15,9 +15,13 @@ El proyecto consta de una App "Empresa" y otra App "core".
 La App "Empresa" consta de los modelos Empresa, Sector, Industria y Pais. 
 El modelo Empresa consta de un nombre y de entradas de Sector, Industria y Pais. 
 
-El proyecto permite ingresar una nueva empresa y permite mostrar el listado de empresas cargadas. 
+El proyecto permite:
+-Ingresar una nueva empresa y permite mostrar el listado de empresas cargadas. 
 
-Tambien permite hacer busquedas de empresas.
+-Hacer busquedas de empresas.
+
+-Mostrar detalles de las empreas
+
 
 Para este proyecto Sector, Industria y Pais ya estan precargados en la base, solo se permite ingresar nuevas empresas.
 
