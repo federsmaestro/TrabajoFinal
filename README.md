@@ -7,7 +7,7 @@ Alumno: Federico Dittrich
 
 Objetivos del proyecto:
 
-Cumplir con los lineamientos de la 3ra preentrega, segun lo detallado por chat por el profe.
+Cumplir con los lineamientos del Trabajo Final, segun lo detallado por chat por el profe.
 
 Explicacion breve tecnica:
 
