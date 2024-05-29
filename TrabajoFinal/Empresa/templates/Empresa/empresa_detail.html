@@ -1,0 +1,20 @@
+{% extends 'core/base.html' %}
+
+{% block titulo %}
+    Empresa | Empresas
+{% endblock titulo %}
+
+{% block body_title %}
+    Detalles
+{% endblock body_title %}
+
+{% block contenido %}
+    <ul>
+        <li>Sector: {{ object.sector }}</li>
+        <li>Industria: {{ object.industria }}</li>
+        <li>Pais: {{ object.pais }}</li>        
+    </ul>
+    <div>
+        <a href="{% url 'Empresa:empresa_list' %}">Volver</a>
+    </div>
+{% endblock contenido %}
