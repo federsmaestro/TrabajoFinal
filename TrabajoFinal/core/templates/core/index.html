@@ -6,6 +6,25 @@
 
 {% block contenido %} 
     <div>
-        <a href="{% url 'Empresa:index' %}">Mostrar Empresas</a>
+        {% if user.is_authenticated %}
+        <li class="nav-item">
+            <a href="{% url 'Empresa:index' %}">Mostrar Empresas</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-bg-info">Logueado como: {{ user.username }}</a>
+        </li>
+        <li class="nav-item">
+            <form action="{% url 'core:logout' %}" method="post">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-dark">Logout</button>
+            </form>
+        </li>
+    {% else %}
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'core:login' %}">Login</a>
+        </li>
+    {% endif %}
+
+    
     </div>   
 {% endblock contenido %}
