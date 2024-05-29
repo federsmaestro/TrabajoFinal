@@ -33,3 +33,4 @@ class EmpresaDetail(DetailView):
 
 class EmpresaDelete(DeleteView):
     model = Empresa
+    success_url = reverse_lazy("Empresa:empresa_list")
