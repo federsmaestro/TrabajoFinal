@@ -1,0 +1,15 @@
+{% extends 'core/base.html' %}
+
+{% block titulo %}
+    Empresa
+{% endblock titulo %}
+
+{% block body_title %}
+    Acerca de
+{% endblock body_title %}
+
+{% block contenido %}
+    <p class="fs-5">Pagina creada por Federico Dittrich, Trabajo Final para el curso de Python en CODERHOUSE</p>
+    <a class="nav-link" href="{% url 'core:index' %}">Volver</a>
+
+{% endblock contenido %}
