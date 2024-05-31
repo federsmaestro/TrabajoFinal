@@ -41,7 +41,7 @@ Cumplir con los lineamientos del Trabajo Final, segun lo detallado por chat por 
 
 💫 administrador: puede realizar CRUD sobre los modelos				ok
 
-💫 administrador: subir una imagen de perfil para un usuario
+💫 administrador: subir una imagen de perfil para un modelo			ok
 
 🕵️ Flujo del proyecto
 

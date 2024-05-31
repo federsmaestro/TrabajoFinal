@@ -18,6 +18,7 @@ class Industria(models.Model):
 
 class Pais(models.Model):
     nombre = models.CharField(max_length=255)
+    avatar = models.ImageField(upload_to="avatares", null=True, blank=True)
 
     def __str__(self) -> str:
         return self.nombre
