@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrabajoFinal</title>
+</head>
+<body>
+    <div class="row align-items-center my-5">
+        <h1 class="display-6 text-center mb-4 bg-info text-white" style="font-size: 3em;">
+            {% block titulo %}
+            {% endblock titulo %}
+        </h1>
+    </div>
+
+    <div class="row align-items-center my-5">
+        <h1 class="display-4 text-center mb-4 bg-info text-white ">
+            {% block body_title %}
+            {% endblock body_title %}
+        </h1>
+    </div>
+
+    {% block contenido %}     
+    {% endblock contenido %}
+    
+</body>
+</html>
