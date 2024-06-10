@@ -12,7 +12,12 @@
     <ul>
         <li>Sector: {{ object.sector }}</li>
         <li>Industria: {{ object.industria }}</li>
-        <li>Pais: {{ object.pais }}</li>        
+        <li>Pais: {{ object.pais }} 
+            {% if  object.pais.avatar %}
+                <img src="{{object.pais.avatar.url}}" width="30">
+            {% endif %} 
+        </li> 
+           
     </ul>
     <div>
         <a href="{% url 'Empresa:empresa_list' %}">Volver</a>
